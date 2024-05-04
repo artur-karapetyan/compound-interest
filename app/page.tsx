@@ -34,7 +34,7 @@ export default function Home() {
       <div className="flex py-12 flex-col w-screen bg-white dark:bg-[#1c1c1c]">
         <form
           onSubmit={calculateInterest}
-          className="flex flex-col gap-5 w-full h-full px-5 py-12"
+          className="flex flex-col gap-5 w-full h-full px-5 pt-[90px]"
         >
           <p className="w-full text-center font-semibold">Ավանդի հաշվում</p>
           <Input
@@ -62,8 +62,8 @@ export default function Home() {
             Հաշվել
           </Button>
           {result && (
-            <p className="w-full text-center font-semibold">
-              Տոկոսադրույք՝ {result}
+            <p className="w-full text-center text-[20px] font-semibold">
+              Գումար` {result}
             </p>
           )}
         </form>

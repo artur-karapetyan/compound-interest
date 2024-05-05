@@ -22,19 +22,19 @@ export default function Home() {
     const rate = parseFloat(percent);
     const time = parseFloat(years);
 
-    const interest = principal * Math.pow(1 + rate / 100, time) - principal;
-    setResult((principal + interest).toFixed(2));
+    const interest = principal * Math.pow(1 + rate / 100, time);
+    setResult(interest.toFixed(2));
   };
 
   return (
     <div className="min-h-[100svh] w-screen">
       <div className="fixed top-0 left-0 w-[100vw] text-[15px] h-[80px] py-2 px-4 text-center bg-white border-b border-border flex flex-row items-center justify-center dark:bg-slate-800">
-        Լևոն Շանթի անվան հիմնական դպրոցի 7ա դասարանի նագծային աշխատանք
+        Լևոն Շանթի անվան հիմնական դպրոցի 7ա դասարանի նախագծային աշխատանք
       </div>
-      <div className="flex py-12 flex-col w-screen bg-white dark:bg-[#1c1c1c]">
+      <div className="flex py-12 flex-col items-center w-screen bg-white dark:bg-[#1c1c1c]">
         <form
           onSubmit={calculateInterest}
-          className="flex flex-col gap-5 w-full h-full px-5 pt-[90px]"
+          className="flex flex-col gap-5 w-full md:w-[375px] h-full px-5 pt-[90px]"
         >
           <p className="w-full text-center font-semibold">Ավանդի հաշվում</p>
           <Input
@@ -62,7 +62,7 @@ export default function Home() {
             Հաշվել
           </Button>
           {result && (
-            <p className="w-full text-center text-[20px] font-semibold">
+            <p className="w-full text-center flex items-center justify-center text-[20px] font-semibold">
               Գումար` {result}
             </p>
           )}
